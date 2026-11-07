@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#10131f" />
+  <meta name="description" content="Get practical feedback on your dating profile bio and presentation. Free, private, and easy to try." />
+  <title>ProfileSpark — Make your profile feel more like you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+  <header class="topbar wrap">
+    <a class="brand" href="#top" aria-label="ProfileSpark home">
+      <span class="brand-mark">✳</span><span>profile<span class="brand-light">spark</span></span>
+    </a>
+    <div class="top-note"><span class="status-dot"></span> Free profile check <span class="top-divider">·</span> Private by design</div>
+  </header>
+
+  <main id="top" class="wrap">
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-line"></span> A BETTER FIRST IMPRESSION STARTS HERE</div>
+      <h1>Make your profile<br><span class="gradient-text">feel more like you.</span></h1>
+      <p class="hero-copy">Get practical feedback on your bio and profile presentation. No ratings of your appearance—just useful ways to show your personality more clearly.</p>
+      <div class="hero-points">
+        <span><b>✦</b> Instant feedback</span><span><b>✦</b> Actionable tips</span><span><b>✦</b> No account needed</span>
+      </div>
+    </section>
+
+    <section class="workspace" aria-label="Profile checker">
+      <div class="form-panel panel">
+        <div class="panel-heading">
+          <div><div class="step-label">YOUR PROFILE <span>01 / 02</span></div><h2>Let’s take a look.</h2></div>
+          <div class="spark-icon">✳</div>
+        </div>
+        <form id="profile-form">
+          <label class="field-label" for="bio">Paste your dating bio <span class="optional">OPTIONAL</span></label>
+          <textarea id="bio" maxlength="1500" placeholder="A little about you, what you enjoy, and what makes a good weekend..."></textarea>
+          <div class="field-meta"><span>Give us a few lines to work with.</span><span id="char-count">0 / 1,500</span></div>
+
+          <div class="separator"><span>AND / OR</span></div>
+
+          <label class="field-label" for="photo-input">Add a profile photo <span class="optional">OPTIONAL</span></label>
+          <label class="upload-zone" id="upload-zone" for="photo-input">
+            <input id="photo-input" type="file" accept="image/png,image/jpeg,image/webp" />
+            <span class="upload-symbol">↑</span>
+            <span class="upload-main" id="upload-main">Choose a photo</span>
+            <span class="upload-sub" id="upload-sub">JPG, PNG or WEBP · stays on this device in this demo</span>
+            <img id="photo-preview" alt="Selected profile photo preview" />
+          </label>
+
+          <label class="age-check"><input id="adult-check" type="checkbox" /><span>I confirm I’m 18 or older.</span></label>
+          <button class="primary-button" type="submit">Check my profile <span>↗</span></button>
+          <p class="fine-print">This prototype gives profile-presentation feedback only. It does not judge attractiveness, compatibility, or personal worth.</p>
+          <p class="error-message" id="error-message" role="alert"></p>
+        </form>
+      </div>
+
+      <aside class="side-panel">
+        <div class="side-card promise-card">
+          <div class="tiny-kicker">THE PROFILESPARK METHOD</div>
+          <h3>Small changes.<br><span class="gradient-text">A clearer you.</span></h3>
+          <div class="method-list">
+            <div class="method-item"><span class="method-number">01</span><div><b>Clarity</b><p>Can someone quickly understand who you are?</p></div></div>
+            <div class="method-item"><span class="method-number">02</span><div><b>Personality</b><p>Does your profile give people something to connect with?</p></div></div>
+            <div class="method-item"><span class="method-number">03</span><div><b>Presentation</b><p>Does your photo setup look clear and intentional?</p></div></div>
+          </div>
+        </div>
+        <div class="privacy-card"><span class="lock-icon">⌑</span><div><b>Your privacy matters</b><p>In this demo, your bio and image are processed locally in your browser. Nothing is uploaded or saved.</p></div></div>
+      </aside>
+    </section>
+
+    <section class="results-section hidden" id="results" aria-live="polite">
+      <div class="results-topline"><span class="eyebrow-line"></span> YOUR PROFILE SNAPSHOT <span class="eyebrow-line"></span></div>
+      <div class="result-layout">
+        <div class="score-panel panel">
+          <div class="score-label">PROFILE CLARITY SCORE</div>
+          <div class="score-wrap"><div class="score-number" id="score-number">78</div><div class="score-outof">/ 100</div></div>
+          <div class="score-meter"><span id="score-meter-fill"></span></div>
+          <div class="score-verdict" id="score-verdict">A promising start</div>
+          <p class="score-disclaimer">A playful checklist score—not a scientific measure or a judgment of you.</p>
+          <div class="share-card" id="share-card">
+            <div class="share-brand"><span class="brand-mark">✳</span> profile<span class="brand-light">spark</span></div>
+            <div class="share-score-line"><span id="share-score">78</span><span>/100</span></div>
+            <div class="share-caption">My profile clarity score. What would yours be?</div>
+            <div class="share-url">PROFILESPARK · PROFILE PRESENTATION CHECK</div>
+          </div>
+          <button class="secondary-button" id="share-button" type="button">Share my score <span>↗</span></button>
+          <div class="share-feedback" id="share-feedback" role="status"></div>
+        </div>
+
+        <div class="feedback-panel panel">
+          <div class="step-label">YOUR FIRST INSIGHT <span>02 / 02</span></div>
+          <h2 id="result-title">You have a good starting point.</h2>
+          <p class="result-summary" id="result-summary">A little more specificity can make your profile easier to connect with.</p>
+          <div class="tip-card"><div class="tip-icon">✦</div><div><div class="tip-label">YOUR NEXT MOVE</div><p id="result-tip">Replace a broad phrase with one vivid detail about something you genuinely enjoy.</p></div></div>
+          <div class="report-preview">
+            <div class="report-header"><div><span class="tiny-kicker">THE FULL REPORT</span><h3>Your improvement plan</h3></div><span class="report-pill">PREVIEW</span></div>
+            <div class="report-row"><span>01</span><div><b>Make it more specific</b><p>Turn general interests into memorable details.</p></div><span class="check-mark">✓</span></div>
+            <div class="report-row"><span>02</span><div><b>Give people an opening</b><p>Add a natural conversation starter.</p></div><span class="check-mark">✓</span></div>
+            <div class="report-row"><span>03</span><div><b>Review your photo setup</b><p>Check light, framing, and background.</p></div><span class="check-mark">✓</span></div>
+            <div class="demo-note">Prototype preview · AI analysis and paid checkout are not connected.</div>
+          </div>
+          <button class="text-button" id="edit-button" type="button">← Edit my profile</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="bottom-cta">
+      <div><div class="tiny-kicker">GOOD PROFILES FEEL HUMAN</div><h2>Be memorable by being <span class="gradient-text">more yourself.</span></h2></div>
+      <a href="#top" class="outline-button">Try the free check <span>↑</span></a>
+    </section>
+  </main>
+
+  <footer class="footer wrap"><a class="brand" href="#top"><span class="brand-mark">✳</span><span>profile<span class="brand-light">spark</span></span></a><span>Made for better conversations. Not higher ratings.</span><span>© 2026 ProfileSpark · Demo</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
